@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>Mileage calculator</title>
+        <script>
+            function MilesPerGallon() {
+                let text = document.getElementById('Beginning').value;
+                let b = parseFloat(text);
+                text = document.getElementById('Ending').value;
+                let e = parseFloat(text);
+                text = document.getElementById('Gallons').value;
+                let g = parseFloat(text);
+                let mpg = (e - b) / g;
+                document.getElementById('MilesPerGallon').innerHTML = mpg;
+            }
+        </script>
+    </head>
+    <body>
+        <p>This program computes the mileage of a vehicle</p>
+        Please enter the odometer reading before trip: <input type="text" id="Beginning"><br>
+        Please enter the odometer reading after trip: <input type="text" id="Ending"><br>
+        Please enter the gallons used during trip: <input type="text" id="Gallons"><br>
+        <button type="button" onclick="MilesPerGallon()">Calculate</button>
+        <div id="MilesPerGallon"></div>
+    </body>
+</html>

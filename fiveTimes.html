@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Five Times</title>
+    <script>
+            /*
+             * Defining Table
+             * Input(s): No inputs.
+             * Processing: A loop that computes and displays the five times table from 1 to 12.
+             * Output(s): Five times table from 1 - 12.
+             */
+
+             function fiveTimes (){
+                 let multiplicationTable = "";
+                for(let i = 1; i < 13; i++){
+                    let multiplication =  i * 5;
+                    multiplicationTable += "5" +" * " + i + " = " + multiplication + "<br>";
+                }
+
+                document.getElementById("output").innerHTML = multiplicationTable;
+             }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="fiveTimes()">Display Multiplication Table</button>
+    <div id="output"></div>
+</body>
+</html>

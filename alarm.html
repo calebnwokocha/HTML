@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alarm</title>
+<script>
+/*
+* Defining Table
+* Input(s): The input will come directly from computer's clock
+* Processing: If it is Monday through Friday alarm will notify user to get up,
+* if it is Saturday through Sunday alarm will notify user to sleep in.
+* If the date is a holiday (January 1 (New Year’s Day),
+* July 4 (U.S. Independence Day), and December 25 (Christmas)) user may sleep in.
+* Output: Program will notify user whether to "Get up!" or "Sleep In"
+*/
+
+function alarmNotification() {
+    var now = new Date();
+    var month = now.getMonth();
+    var dayOfMonth = now.getDate();
+    var dayOfWeek = now.getDay();
+    let alarm = " "
+    if ((month == 0) && (dayOfMonth == 1)) {
+        alarm = "Sleep In"
+        } else if ((month == 6) && (dayOfMonth == 4)) {
+        alarm = "Sleep In"
+        } else if ((month == 11) && (dayOfMonth == 25)) {
+        alarm = "Sleep In"
+        } else if (dayOfWeek == 0 || dayOfWeek == 6) {
+        alarm = "Sleep In"
+        } else {
+        alarm = "Get Up!"
+    }
+    document.getElementById("output").innerHTML = alarm
+}
+
+</script>
+</head>
+<body>
+<input type="test" id="alarm"><br>
+<button type="button" onclick="alarmNotification();">Alarm</button>
+<div id="output"></div>
+</body>
+</html>

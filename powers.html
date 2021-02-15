@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Powers Of 2</title>
+    <script>
+            /*
+             * Defining Table
+             * Input(s): No input.
+             * Processing: In a loop, compute powers of 2 from 2 to the power 0 - 2 to the power 31.
+             * Output(s): Powers of 2.
+             */
+            function powersOfTwo(){
+                let powers = "";
+                let i = 0;
+
+                while (i < 32){
+                    let powerUp = Math.pow(2,i);
+                    let superScript = i.toString();
+                    powers += "2" + superScript.sup() + " = " + powerUp + "<br>";
+                    i++;
+                }
+
+                document.getElementById("output").innerHTML = powers;
+            }
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="powersOfTwo()">Display Powers of Two</button>
+    <div id="output"></div>
+</body>
+</html>

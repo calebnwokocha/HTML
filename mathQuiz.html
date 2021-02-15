@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Math Quiz</title>
+
+<script>
+/* Input: two numbers, an operator, and an answer
+ * Processing: Verify if the math expression is true or false
+ * Output: true or false
+ */
+function mathTest() {
+    // Read user input
+    let text0 = document.getElementById('firstNum').value;
+    let text1 = document.getElementById('symbol').value;
+    let text2 = document.getElementById('secondNum').value;
+    let text3 = document.getElementById('answer').value;
+
+    // Convert what the user typed from text into a number
+    let firstNum = parseFloat(text0);
+    let secondNum = parseFloat(text2);
+    let answer = parseFloat(text3);
+    let symbol = text1
+
+    // Do math
+    let a;
+    if (symbol == "+") {
+        a = firstNum + secondNum
+    }
+    else if (symbol == "-") {
+        a = firstNum - secondNum
+    }
+    else if (symbol == "*") {
+        a = firstNum * secondNum
+    }
+    else if (symbol == "/") {
+        a = firstNum / secondNum
+    }
+
+    let result;
+    if (a == answer) {
+        result = "Correct! Good job";
+    }
+    else 
+        result = "Incorrect. Try again";
+
+    // Display the answer
+    document.getElementById('result').innerHTML = result;
+}
+</script>
+</head>
+
+<body>                               
+<h1>Math Test</h1>
+    <input type="text" id="firstNum">
+    <input type="text" id="symbol">
+    <input type="text" id="secondNum">
+    =
+    <input type="text" id= "answer">
+<button type="button" onclick="mathTest()">Answer</button>
+<div id="result"></div>                     
+</body>            
+</html>

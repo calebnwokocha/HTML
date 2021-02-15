@@ -1,0 +1,34 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <title>Sum Odd Numbers</title>
+
+    <script>
+/* Input: Number
+ * Processing: Finds sum of odd numbers
+ * Output: The sum of all odd integers between 1 and number
+ */
+function addOddNumbers() {
+
+    var number = parseFloat(document.getElementById('input').value);
+    var sum = 0;
+
+    for (let i = 1; i <= number; i++) {
+        if (i % 2 != 0) {
+            sum += i;
+        }
+    }
+
+    // Show results
+    document.getElementById("output").innerHTML = sum;
+}
+    </script>
+</head>
+
+<body>
+    Enter an odd number here: <input type="text" id="input">
+    <button type="button" onclick="addOddNumbers()">Calculate</button>
+    <div id="output"></div>
+</body>
+</html>

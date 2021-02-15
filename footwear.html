@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Shoes for the Weather</title>
+
+<script>
+/* Input: Weather
+ * Processing: Compute what footwear is best for the weather
+ * Output: Best footwear fpr the weather
+ */
+function computeFootwear() {
+    // Read the weather as input from user
+    let weather = document.getElementById('input').value;
+
+    let choice;
+    if (weather == "humid") {
+        choice = "shoes";
+    }
+    else if (weather == "windy") {
+        choice = "shoes";
+    }
+    else if (weather == "hot") {
+        choice = "sandals";
+    }
+    else if (weather == "rainy") {
+        choice = "galoshes";
+    }
+    else if (weather == "snowy") {
+        choice = "boots";
+    }
+    else
+        choice = "shoes";
+    
+    // display the appropriate footwear
+    document.getElementById("output").innerHTML = choice;
+}
+</script>
+</head>
+
+<body>                               
+<h1>Shoes for the Weather</h1>
+    How is the weather today? <input type="text" id="input">
+<button type="button" onclick="computeFootwear()">Best Footwear</button>
+<div id="output"></div>                     
+</body>            
+</html>
